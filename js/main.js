@@ -9,6 +9,7 @@ if (isNaN(distance)){
     alert("Non credo i chilometri si misurino in lettere, ricarichi la pagina per riprovare");
 } else{
     alert(`Il suo viaggio non scontato le verrà a costare ${fullPrice}`);
+    fullPrice=fullPrice.toFixed(2);
     costoTreno.innerHTML = `Il prezzo del biglietto è ${fullPrice}`;
 }
 
@@ -21,14 +22,14 @@ if (isNaN(age)){
 }else if (age < 18){
     alert("i viaggiatori minorenni hanno diritto al 20% di sconto!");
     fullPrice = fullPrice * 0.8;
-
+    fullPrice=fullPrice.toFixed(2);
     alert(`Il suo viaggio scontato le verrà a costare ${fullPrice}`);
     costoTreno.innerHTML = `Il prezzo del biglietto è ${fullPrice}`;
 
 }else  if (age > 65){
     alert("i viaggiatori sopra i 65 anni hanno diritto al 40% di sconto!");
     fullPrice = fullPrice * 0.6;
-
+    fullPrice=fullPrice.toFixed(2);
     alert(`Il suo viaggio scontato le verrà a costare ${fullPrice}`);
     costoTreno.innerHTML = `Il prezzo del biglietto è ${fullPrice}`;
 }else{
